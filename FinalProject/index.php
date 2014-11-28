@@ -1,3 +1,11 @@
+<?php
+session_start();
+/** @noinspection PhpDeprecationInspection */
+if(!session_is_registered(myusername)){
+    header("location:main_login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

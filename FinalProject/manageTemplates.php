@@ -7,7 +7,7 @@
 <p>Manage CSS Templates</p>
 
 <table border = "1">
-    <th>Template ID</th><th>Name</th><th>Description</th><th>Active</th>
+    <th>Template ID</th><th>Name</th><th>Description</th><th>Active Template</th><th></th>
     <th>Created By:</th><th>Creation Date:</th><th>Modified By:</th><th>Modify Date:</th>
 
     <?php
@@ -31,13 +31,21 @@
             <td><?php echo $row['Name'];?></td>
             <td><?php echo $row['Description'];?></td>
             <td>
-                <input type="radio" name="activeTemplate" value="<?php echo $currentID; ?>"
+                <input type="radio" name="activeTemplate" disabled="disabled"
                 <?php
                     if ($isActive == true)
                     {echo " checked />";}
                     else
                     {echo " />";}
                 ?>
+            </td>
+            <td>
+                <form action="makeTemplateActive.php"  method="post" name="makeTemplateActive">
+                        <input name="id" type="hidden" value="<?php echo $currentID;?>" />
+                    <p>
+                        <input name="submit" type="submit" value="Activate" />
+                    </p>
+                </form>
             </td>
             <td><?php echo $row['CreatedBy'];?></td>
             <td><?php echo $row['CreationDate'];?></td>
@@ -67,7 +75,7 @@
         <input name="update" type="text">
     </p>
     <p>
-        <input name="submit" type="submit" value="Update User">
+        <input name="submit" type="submit" value="Update Template">
     </p>
 </form>
 <form action="createTemplate.php" method="post" name="createTemplate">

@@ -40,7 +40,7 @@
 
 <form action="deactivateUser.php"  method="post" name="deactivateUser">
     <p>ID to Deactivate:
-        <input name="id" type="text">
+        <input name="deactivate" type="text">
     </p>
     <p>
         <input name="submit" type="submit" value="Deactivate User">

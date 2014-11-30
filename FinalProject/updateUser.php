@@ -15,7 +15,7 @@
 <form id="createUser" method="post" action="">
 
     <p>User ID:
-        <input id="User_ID" name="User_ID" type="text" maxlength="255" value=""/>
+        <input id="User_ID" name="User_ID" type="text" maxlength="255" value="" readonly="readonly" />
 
     <p>First Name:
         <input id="first_name" name="first_name" type="text" maxlength="255" value=""/>

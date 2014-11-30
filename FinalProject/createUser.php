@@ -5,13 +5,13 @@
 <html>
 <head>
 
-<title>  </title>
+<title>Create User</title>
 
 </head>
 
 <body>
 
-    <form id="createUser" method="post" action="">
+    <form id="createUser" method="post" action="runCreateUser.php">
 
        <p>User ID:
            <input id="User_ID" name="User_ID" type="text" maxlength="255" value=""/>

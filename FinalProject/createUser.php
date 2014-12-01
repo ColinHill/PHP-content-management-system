@@ -33,13 +33,13 @@
 
         <p>Privileges:
 
-        <p>	<input id="Administrator" name="Administrator" class="element checkbox" type="checkbox" value="1" />
+        <p>	<input id="Administrator" name="Administrator" class="element checkbox" type="checkbox" value="0" />
         Administrator
 
-        <p> <input id="Editor" name="Editor" class="element checkbox" type="checkbox" value="1" />
+        <p> <input id="Editor" name="Editor" class="element checkbox" type="checkbox" value="0" />
         Editor
 
-        <p> <input id="Author" name="Author" class="element checkbox" type="checkbox" value="1" />
+        <p> <input id="Author" name="Author" class="element checkbox" type="checkbox" value="0" />
         Author
 
         <p><input id=" " type="submit" name="submit" value="Create User" />

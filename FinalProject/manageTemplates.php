@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>     </title>
+    <title> </title>
 </head>
 <body>
 <p>Manage CSS Templates</p>
@@ -64,7 +64,7 @@
 
 <form action="deleteTemplate.php"  method="post" name="deactivateUser">
     <p>ID to Delete:
-        <input name="id" type="text">
+        <input name="delete" type="text">
     </p>
     <p>
         <input name="submit" type="submit" value="Delete Template">

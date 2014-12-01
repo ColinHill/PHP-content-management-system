@@ -13,29 +13,9 @@ $last_name = $_POST['last_name'];
 $user_name = $_POST['user_name'];
 $password = $_POST['password'];
 $salt = $_POST['salt'];
-if (!isset($_POST['Administrator']))
-{
-    $administrator = 0;
-}
-else {
-    $administrator = 1;
-}
-
-if (!isset($_POST['Editor']))
-{
-    $editor = 0;
-}
-else {
-    $editor = 1;
-}
-
-if (!isset($_POST['Author']))
-{
-    $author = 0;
-}
-else {
-    $author = 1;
-}
+$administrator = $_POST['Administrator'];
+$editor = $_POST['Editor'];
+$author = $_POST['Author'];
 
 $query = "INSERT INTO Users (first_name, last_name, user_name, password, salt, CreatedBy) ";
 $query .= "VALUES ('$first_name', '$last_name', '$user_name', '$password', '$salt', '1')";
@@ -69,6 +49,13 @@ if(!$result)
     die('Unable to insert Privilege into CMS Database.');
 }
 
+$userquery = "SELECT * FROM Users ORDER BY User_ID DESC LIMIT 1";
+$result = mysqli_query($db, $userquery);
+if(!$result)
+{
+    die('Unable to select record from CMS Database.');
+}
+
 ?>
 
 <table>
@@ -88,17 +75,23 @@ if(!$result)
             <td><?php echo $row['first_name']; ?></td>
             <td><?php echo $row['last_name']; ?></td>
             <td><?php echo $row['user_name']; ?></td>
+            <?php
+            endwhile;
+            $privquery = "SELECT * FROM Privileges ORDER BY Privileges_ID DESC LIMIT 1;";
+            $result = mysqli_query($db, $privquery);
+            while($row = mysqli_fetch_assoc($result)):
+            ?>
             <td><?php echo $row['Administrator'] ?></td>
             <td><?php echo $row['Editor'] ?></td>
             <td><?php echo $row['Author'] ?></td>
         </tr>
         <p>Successfully Inserted <?php echo mysqli_affected_rows($db); ?> records(s).</p>
-        <a href="manageUsers.php">Back to Manage Users page</a>
     <?php
     endwhile;
     dbConnect::closeConnection($db);
     ?>
     </tbody>
 </table>
+<a href="manageUsers.php">Back to Manage Users page</a>
 </body>
 </html>

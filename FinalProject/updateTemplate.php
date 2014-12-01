@@ -30,11 +30,11 @@
         <input id="Description" name="Description" type="text" maxlength="255" value="<?php echo $description;?>"/>
 
     <p>CSS Snippet:</p><p>
-        <input id="CSSSnippet" name="CSSSnippet" type="text" maxlength="10000" cols="100" rows="20" wrap="soft" value="<?php echo $csssnippet;?>"/>
+        <input id="CSSSnippet" name="CSSSnippet" type="text" size="100" value="<?php echo $csssnippet;?>"/>
+        <p>
+        <textarea form="updateTemplate" name="CSSSnippet" cols="100" rows="20" maxlength="10000" wrap="soft" value=""><?php echo $csssnippet;?></textarea>
 
-    <p><input id=" " type="submit" name="submit" value="Update Template" />
+    <p><input id="submit" type="submit" name="submit" value="Update Template" />
 <?php endwhile; ?>
 </body>
 </html>
-
-<!--<textarea name="CSSSnippet" cols="100" rows="20" maxlength="10000" wrap="soft" value="<?php //echo $csssnippet;?>"></textarea>-->

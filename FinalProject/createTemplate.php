@@ -17,12 +17,13 @@
         <input id="Name" name="Name" type="text" maxlength="255" value=""/>
 
     <p>Description:
-        <input id="Description" name="Description" type="text" maxlength="255" value=""/>
+        <input id="Description" name="Description" type="text" maxlength="255" size ="100" value=""/>
 
     <p>CSS Snippet:</p><p>
-        <input id="CSSSnippet" name="CSSSnippet" type="text" maxlength="10000" cols="100" rows="20" wrap="soft" value=""/>
+      <!--  <textarea form="createTemplate" name="CSSSnippet" cols="100" rows="20" maxlength="10000" wrap="soft" value=""></textarea> -->
+       <input id="CSSSnippet" name="CSSSnippet" type="text" maxlength="10000" cols="100" rows="20" wrap="soft" value=""/>
 
-    <p><input id=" " type="submit" name="submit" value="Create Template" />
+    <p><input id="submit" type="submit" name="submit" value="Create Template" />
 
 </body>
 </html>

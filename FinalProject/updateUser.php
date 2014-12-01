@@ -1,18 +1,13 @@
-<?php
-<?php
-
-?>
-
 <html>
 <head>
 
-    <title>  </title>
+    <title>Update User</title>
 
 </head>
 
 <body>
 
-<form id="createUser" method="post" action="">
+<form id="updateUser" method="post" action="runUpdateUser.php">
 
     <p>User ID:
         <input id="User_ID" name="User_ID" type="text" maxlength="255" value="" readonly="readonly" />
@@ -34,16 +29,16 @@
 
     <p>Privileges:
 
-    <p>	<input id="Administrator" name="Administrator" class="element checkbox" type="checkbox" value="1" />
+    <p>	<input id="Administrator" name="Administrator" class="element checkbox" type="checkbox" value="0" />
         Administrator
 
-    <p> <input id="Editor" name="Editor" class="element checkbox" type="checkbox" value="1" />
+    <p> <input id="Editor" name="Editor" class="element checkbox" type="checkbox" value="0" />
         Editor
 
-    <p> <input id="Author" name="Author" class="element checkbox" type="checkbox" value="1" />
+    <p> <input id="Author" name="Author" class="element checkbox" type="checkbox" value="0" />
         Author
 
-    <p><input id=" " type="submit" name="submit" value="Create User" />
+    <p><input id=" " type="submit" name="submit" value="Update User" />
 
 </body>
 </html>

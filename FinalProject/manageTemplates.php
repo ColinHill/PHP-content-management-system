@@ -41,7 +41,7 @@
             </td>
             <td>
                 <form action="makeTemplateActive.php"  method="post" name="makeTemplateActive">
-                        <input name="id" type="hidden" value="<?php echo $currentID;?>" />
+                        <input name="CSSID" type="hidden" value="<?php echo $currentID;?>" />
                     <p>
                         <input name="submit" type="submit" value="Activate" />
                     </p>

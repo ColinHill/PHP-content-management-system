@@ -1,6 +1,4 @@
 <?php
-include_once ('dbConnect.php');
-$db = dbConnect::getConnection();
 
 ?>
 
@@ -11,7 +9,7 @@ $db = dbConnect::getConnection();
 
 <body>
 
-<form id="updateArticle" method="post" action="runCreateArticles.php">
+<form id="createArticle" method="post" action="runCreateArticles.php">
 
     <p>Name:
         <input id="Name" name="Name" type="text" maxlength="255" value=""/>
@@ -36,11 +34,11 @@ $db = dbConnect::getConnection();
     <p><input type="radio" name="allPages" />
 
     <p>
-        <textarea form="updateArticle" name="HTMLSnippet" cols="100" rows="20" maxlength="10000" wrap="soft" value="">
+        <textarea form="createArticle" name="HTMLSnippet" cols="100" rows="20" maxlength="10000" wrap="soft" value="">
 
         </textarea>
 
-    <p><input id="submit" type="submit" name="submit" value="Update Article" />
+    <p><input id="submit" type="submit" name="submit" value="Create Article" />
 
 </body>
 </html>

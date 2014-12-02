@@ -46,6 +46,53 @@ if(!isset($_SESSION['myusername'])){
     </style>
 </head>
 <body>
+
+<?php
+if ($_SESSION['allaccess'] == 1){ ?>
+    <form action="manageArticles.php">
+        <input type="submit" value="Manage Articles" />
+    </form>
+    <form action="manageContentAreas.php">
+        <input type="submit" value="Manage Users" />
+    </form>
+    <form action="managePages.php">
+        <input type="submit" value="Manage Pages" />
+    </form>
+    <form action="manageTemplates.php">
+        <input type="submit" value="Manage Templates" />
+    </form>
+    <form action="manageUsers.php">
+        <input type="submit" value="Manage Users" />
+    </form>
+<?php } ?>
+
+<?php
+if ($_SESSION['admin'] == 1){ ?>
+    <form action="manageUsers.php">
+        <input type="submit" value="Manage Users" />
+    </form>
+<?php } ?>
+
+<?php
+if ($_SESSION['editor'] == 1){ ?>
+    <form action="manageArticles.php">
+        <input type="submit" value="Manage Articles" />
+    </form>
+    <form action="manageContentAreas.php">
+        <input type="submit" value="Manage Users" />
+    </form>
+    <form action="managePages.php">
+        <input type="submit" value="Manage Pages" />
+    </form>
+    <form action="manageTemplates.php">
+        <input type="submit" value="Manage Templates" />
+    </form>
+<?php } ?>
+
+<form action="index.php">
+    <input type="submit" value="Log Out" />
+</form>
+
 <header>
     <h1><?php echo $currentPage->getName(); ?></h1>
 </header>

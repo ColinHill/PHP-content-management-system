@@ -11,6 +11,10 @@
 
 <body>
 
+<form action="manageTemplates.php">
+    <input type="submit" value="Return To Manage Templates" />
+</form>
+
 <form id="createTemplate" method="post" action="runCreateTemplate.php">
 
     <p>Name:

@@ -18,6 +18,10 @@
 
 <body>
 
+<form action="manageTemplates.php">
+    <input type="submit" value="Return To Manage Templates" />
+</form>
+
 <form id="updateTemplate" method="post" action="runUpdateTemplate.php">
 
     <p>Template ID:

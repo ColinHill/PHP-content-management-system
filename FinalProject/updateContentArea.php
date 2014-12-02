@@ -21,6 +21,10 @@ endwhile;
 
 <body>
 
+<form action="manageContentAreas.php">
+    <input type="submit" value="Return To Manage Content Areas" />
+</form>
+
 <form id="updateContent" method="post" action="runUpdateContent.php">
 
     <p>Template ID:

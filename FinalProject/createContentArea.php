@@ -9,6 +9,10 @@
 
 <body>
 
+<form action="manageContentAreas.php">
+    <input type="submit" value="Return To Manage Content Areas" />
+</form>
+
 <form id="createContent" method="post" action="runCreateContent.php">
 
     <p>Name:

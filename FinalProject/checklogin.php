@@ -58,6 +58,8 @@ if($count==3){
     $_SESSION['myusername'] = $myusername;
     $_SESSION['mypassword'] = $mypassword;
     $_SESSION['allaccess'] = 1;
+    $_SESSION['admin'] = 0;
+    $_SESSION['editor'] = 0;
     header("location:admin.php");
 }
 
@@ -65,7 +67,9 @@ else if ($count == 1)
 {
     $_SESSION['myusername'] = $myusername;
     $_SESSION['mypassword'] = $mypassword;
+    $_SESSION['allaccess'] = 0;
     $_SESSION['admin'] = 1;
+    $_SESSION['editor'] = 0;
     header("location:admin.php");
 }
 
@@ -73,6 +77,8 @@ else if ($count == 2)
 {
     $_SESSION['myusername'] = $myusername;
     $_SESSION['mypassword'] = $mypassword;
+    $_SESSION['allaccess'] = 0;
+    $_SESSION['admin'] = 0;
     $_SESSION['editor'] = 1;
     header("location:admin.php");
 }

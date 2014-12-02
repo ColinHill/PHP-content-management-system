@@ -30,6 +30,10 @@ if ($allPages == 1)
 
 <body>
 
+<form action="manageArticles.php">
+    <input type="submit" value="Return To Manage Articles" />
+</form>
+
 <form id="updateArticle" method="post" action="runUpdateArticles.php">
 
     <p>Article ID:

@@ -9,6 +9,10 @@
 
 <body>
 
+<form action="manageArticles.php">
+    <input type="submit" value="Return To Manage Articles" />
+</form>
+
 <form id="createArticle" method="post" action="runCreateArticles.php">
 
     <p>Name:

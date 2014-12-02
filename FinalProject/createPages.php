@@ -9,6 +9,10 @@
 
 <body>
 
+<form action="managePages.php">
+    <input type="submit" value="Return To Manage Pages" />
+</form>
+
 <form id="createPage" method="post" action="runCreatePage.php">
 
     <p>Name:

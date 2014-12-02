@@ -4,7 +4,7 @@ class dbConnect
 {
     static public function getConnection()
     {
-        return mysqli_connect("localhost", "root", "inet2005", "CMSTestDB");
+        return mysqli_connect("localhost", "root", "inet2005", "CMSTestDB2");
     }//end getConnection
 
     static public function closeConnection($db)

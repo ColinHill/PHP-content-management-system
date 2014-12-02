@@ -53,7 +53,7 @@ if ($allPages == 1)
 
     <?php
     $queryCA = "SELECT * FROM ContentAreas ORDER BY ContentAreas_ID ASC";
-    $resultCA = mysqli_query($db, $query);
+    $resultCA = mysqli_query($db, $queryCA);
 
     while ($row = mysqli_fetch_assoc($resultCA)):
     $contentAreaValue = $row['ContentArea'];

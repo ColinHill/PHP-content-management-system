@@ -1,19 +1,28 @@
 <?php
 include_once ('dbConnect.php');
 $db = dbConnect::getConnection();
-$Articles_ID = $_POST[''];
-$contentArea = $_POST[''];
-$allPages = $_POST[''];
+$Articles_ID = $_POST['update'];
 
+$query = "SELECT * FROM Articles WHERE Articles_ID = '$Articles_ID'";
+$result = mysqli_query($db, $query);
+
+while ($row = mysqli_fetch_assoc($result)):
+$contentArea = $row['ContentArea'];
+$allPages = $row['AllPages'];
+$name = $row['Name'];
+$title = $row['Title'];
+$description = $row['Description'];
+$page = $row['Page'];
+$htmlSnippet = $row['HTMLSnippet'];
+
+endwhile;
 $isAllPages = false;
 if ($allPages == 1)
 {
     $isAllPages = true;
 }//end if
-?>
 
-$query = "SELECT * FROM Articles WHERE Articles_ID = '$Articles_ID'";
-$result = mysqli_query($db, $query);
+
 
 ?>
 <html>
@@ -26,19 +35,19 @@ $result = mysqli_query($db, $query);
 <form id="updateArticle" method="post" action="runUpdateArticles.php">
 
     <p>Template ID:
-        <input id="Articles_ID" name="Articles_ID" type="text" maxlength="255" value="" readonly="readonly" />
+        <input id="Articles_ID" name="Articles_ID" type="text" maxlength="255" value="<?php echo $Articles_ID; ?>" readonly="readonly" />
 
     <p>Name:
-        <input id="Name" name="Name" type="text" maxlength="255" value=""/>
+        <input id="Name" name="Name" type="text" maxlength="255" value="<?php echo $name; ?>"/>
 
     <p>Title:
-        <input id="Title" name="Title" type="text" maxlength="255" value=""/>
+        <input id="Title" name="Title" type="text" maxlength="255" value="<?php echo $title; ?>"/>
 
     <p>Description:
-        <input id="Description" name="Description" type="text" size="100" maxlength="255" value=""/>
+        <input id="Description" name="Description" type="text" size="100" maxlength="255" value="<?php echo $description; ?>"/>
 
     <p>Page:<p>
-        <input id="Page" name="Page" type="text" value=""/>
+        <input id="Page" name="Page" type="text" value="<?php echo $page; ?>"/>
 
     <p>Content Area:</p>
     <p><select name="contentAreaDropDown" size="1" multiple="no">
@@ -58,7 +67,7 @@ $result = mysqli_query($db, $query);
 
     <p>
         <textarea form="updateArticle" name="HTMLSnippet" cols="100" rows="20" maxlength="10000" wrap="soft" value="">
-            The PHP echo goes here.
+        <?php echo $htmlSnippet; ?>
         </textarea>
 
     <p><input id="submit" type="submit" name="submit" value="Update Article" />

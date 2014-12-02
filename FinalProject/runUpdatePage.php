@@ -13,7 +13,6 @@ $name = $_POST['Name'];
 $alias = $_POST['Alias'];
 $description = $_POST['Description'];
 
-
 $query = "UPDATE SitePages SET Name = '$name', Description = '$description', ";
 $query .= "Alias = '$alias' WHERE SitePages_ID = '$siteid'";
 

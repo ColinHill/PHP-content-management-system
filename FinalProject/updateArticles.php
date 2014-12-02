@@ -22,8 +22,6 @@ if ($allPages == 1)
     $isAllPages = true;
 }//end if
 
-
-
 ?>
 <html>
 <head>

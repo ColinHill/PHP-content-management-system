@@ -38,6 +38,11 @@
     </style>
 </head>
 <body>
+
+<form action="main_login.php">
+    <input type="submit" value="Log In" />
+</form>
+
 <header>
     <h1><?php echo $currentPage->getName(); ?></h1>
 </header>

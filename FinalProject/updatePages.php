@@ -20,6 +20,10 @@ endwhile;
 
 <body>
 
+<form action="managePages.php">
+    <input type="submit" value="Return To Manage Pages" />
+</form>
+
 <form id="updatePage" method="post" action="runUpdatePage.php">
 
     <p>Site Page ID:

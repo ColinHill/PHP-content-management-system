@@ -31,6 +31,10 @@ endwhile;
 
 <body>
 
+<form action="manageUsers.php">
+    <input type="submit" value="Return To Manage Users" />
+</form>
+
 <form id="updateUser" method="post" action="runUpdateUser.php">
 
     <p>User ID:

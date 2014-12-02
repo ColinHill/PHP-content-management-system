@@ -30,9 +30,13 @@ if ($allPages == 1)
 
 <body>
 
+<form action="manageArticles.php">
+    <input type="submit" value="Return To Manage Articles" />
+</form>
+
 <form id="updateArticle" method="post" action="runUpdateArticles.php">
 
-    <p>Template ID:
+    <p>Article ID:
         <input id="Articles_ID" name="Articles_ID" type="text" maxlength="255" value="<?php echo $Articles_ID; ?>" readonly="readonly" />
 
     <p>Name:
@@ -54,12 +58,12 @@ if ($allPages == 1)
     $resultCA = mysqli_query($db, $queryCA);
 
     while ($row = mysqli_fetch_assoc($resultCA)):
-    $contentAreaValue = $row['ContentArea'];
+    $contentAreaValue = $row['Order'];
     $contentAreaName = $row['Name'];
     ?>
 
     <p>
-        <input type="radio" name="<?php echo $contentAreaName ?>" value="<?php echo $contentAreaValue ?>"
+        <input type="radio" name="updateArticle" value="<?php echo $contentAreaValue ?>"
         <?php if ($contentArea == $contentAreaValue) {echo "checked";}?> /><?php echo $contentAreaName ?>
     </p>
 

@@ -4,6 +4,9 @@
     <title> </title>
 </head>
 <body>
+<form action="admin.php">
+    <input type="submit" value="Return To Admin" />
+</form>
 <p>Manage Site Pages</p>
 
 <table border = "1">

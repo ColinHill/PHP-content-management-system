@@ -11,6 +11,10 @@
 
 <body>
 
+<form action="manageUsers.php">
+    <input type="submit" value="Return To Manage Users" />
+</form>
+
     <form id="createUser" method="post" action="runCreateUser.php">
 
        <p>User ID:

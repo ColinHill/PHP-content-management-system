@@ -50,14 +50,15 @@ if ($allPages == 1)
         <input id="Page" name="Page" type="text" value="<?php echo $page; ?>"/>
 
     <p>Content Area:</p>
-    <p><select name="contentAreaDropDown" size="1" multiple="no">
+    <p><select name="contentAreaDropDown" size="4" multiple="no">
         <option value="<?php if ($contentArea == 1){echo '1" selected';} else {echo '1"';}?>">Header</option>
         <option value="<?php if ($contentArea == 2){echo '2" selected';} else {echo '2"';}?>">Aside</option>
         <option value="<?php if ($contentArea == 3){echo '3" selected';} else {echo '3"';}?>">Body</option>
         <option value="<?php if ($contentArea == 4){echo '4" selected';} else {echo '4"';}?>">Footer</option>
     </select>
 
-    <p><input type="radio" name="allPages" disabled="disabled"
+    <p>All Pages?:</p>
+    <p><input type="checkbox" name="allPages"
     <?php
     if ($isAllPages == true)
     {echo " checked />";}
@@ -66,8 +67,7 @@ if ($allPages == 1)
     ?>
 
     <p>
-        <textarea form="updateArticle" name="HTMLSnippet" cols="100" rows="20" maxlength="10000" wrap="soft" value="">
-        <?php echo $htmlSnippet; ?>
+        <textarea form="updateArticle" name="HTMLSnippet" cols="100" rows="20" maxlength="10000" wrap="soft" value=""><?php echo $htmlSnippet; ?>
         </textarea>
 
     <p><input id="submit" type="submit" name="submit" value="Update Article" />

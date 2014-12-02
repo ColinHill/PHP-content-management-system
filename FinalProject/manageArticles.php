@@ -7,7 +7,7 @@
 <p>Manage Articles</p>
 
 <table border = "1">
-    <th>Article ID</th><th>Name</th><th>Title</th><th>Description</th>Page<th>Content Area</th><th>All Pages</th>
+    <th>Article ID</th><th>Name</th><th>Title</th><th>Description</th><th>Page</th><th>Content Area</th><th>All Pages</th>
     <th>Created By:</th><th>Creation Date:</th><th>Modified By:</th><th>Modify Date:</th>
 
     <?php
@@ -34,7 +34,7 @@
             <td><?php echo $row['Page'];?></td>
             <td><?php echo $row['ContentArea'];?></td>
             <td>
-                <input type="radio" name="allPages" disabled="disabled"
+                <input type="checkbox" name="allPages" disabled="disabled"
                 <?php
                 if ($isAllPages == true)
                 {echo " checked />";}

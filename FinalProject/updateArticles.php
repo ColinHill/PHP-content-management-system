@@ -46,19 +46,29 @@ if ($allPages == 1)
     <p>Description:
         <input id="Description" name="Description" type="text" size="100" maxlength="255" value="<?php echo $description; ?>"/>
 
-    <p>Page:<p>
+    <p>Page:
         <input id="Page" name="Page" type="text" value="<?php echo $page; ?>"/>
 
     <p>Content Area:</p>
-    <p><select name="contentAreaDropDown" size="4" multiple="no">
-        <option value="<?php if ($contentArea == 1){echo '1" selected';} else {echo '1"';}?>">Header</option>
-        <option value="<?php if ($contentArea == 2){echo '2" selected';} else {echo '2"';}?>">Aside</option>
-        <option value="<?php if ($contentArea == 3){echo '3" selected';} else {echo '3"';}?>">Body</option>
-        <option value="<?php if ($contentArea == 4){echo '4" selected';} else {echo '4"';}?>">Footer</option>
-    </select>
 
-    <p>All Pages?:</p>
-    <p><input type="checkbox" name="allPages"
+    <?php
+    $queryCA = "SELECT * FROM ContentAreas ORDER BY ContentAreas_ID ASC";
+    $resultCA = mysqli_query($db, $query);
+
+    while ($row = mysqli_fetch_assoc($resultCA)):
+    $contentAreaValue = $row['ContentArea'];
+    $contentAreaName = $row['Name'];
+    ?>
+
+    <p>
+        <input type="radio" name="<?php echo $contentAreaName ?>" value="<?php echo $contentAreaValue ?>"
+        <?php if ($contentArea == $contentAreaValue) {echo "checked";}?> /><?php echo $contentAreaName ?>
+    </p>
+
+    <?php endwhile; ?>
+
+    <p>All Pages:
+    <input type="checkbox" name="allPages"
     <?php
     if ($isAllPages == true)
     {echo " checked />";}

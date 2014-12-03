@@ -36,7 +36,7 @@
             <option value="4">Footer</option>
         </select>
 
-    <p><input type="radio" name="allPages" />
+    <p><input type="checkbox" name="allPages" />
 
     <p>
         <textarea form="createArticle" name="HTMLSnippet" cols="100" rows="20" maxlength="10000" wrap="soft" value="">

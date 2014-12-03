@@ -26,7 +26,7 @@ endwhile;
     <input type="submit" value="Return To Manage Content Areas" />
 </form>
 
-<form id="updateContent" method="post" action="runUpdateContent.php">
+<form id="updateContent" method="post" onsubmit="return validateForm()" action="runUpdateContent.php">
 
     <p>Template ID:
         <input id="ContentAreas_ID" name="ContentAreas_ID" type="text" maxlength="255" value="<?php echo $contentid; ?>" readonly="readonly" />

@@ -25,7 +25,7 @@ endwhile;
     <input type="submit" value="Return To Manage Pages" />
 </form>
 
-<form id="updatePage" method="post" action="runUpdatePage.php">
+<form id="updatePage" method="post" onsubmit="return validateForm()" action="runUpdatePage.php">
 
     <p>Site Page ID:
         <input id="SitePages_ID" name="SitePages_ID" type="text" maxlength="255" value="<?php echo $siteid; ?>" readonly="readonly" />

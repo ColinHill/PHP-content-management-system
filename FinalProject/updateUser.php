@@ -35,7 +35,7 @@ endwhile;
     <input type="submit" value="Return To Manage Users" />
 </form>
 
-<form id="updateUser" method="post" action="runUpdateUser.php">
+<form id="updateUser" method="post" onsubmit="return validateForm()" action="runUpdateUser.php">
 
     <p>User ID:
         <input id="User_ID" name="User_ID" type="text" maxlength="255" value="<?php echo $userid; ?>" readonly="readonly" />

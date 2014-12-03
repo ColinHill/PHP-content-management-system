@@ -15,7 +15,7 @@
     <input type="submit" value="Return To Manage Templates" />
 </form>
 
-<form id="createTemplate" method="post" onsubmit="return validateForm()" action="runCreateTemplate.php">
+<form id="createTemplate" method="post" onsubmit="return validateForm8()" action="runCreateTemplate.php">
 
     <p>Name:
         <input id="Name" name="Name" type="text" maxlength="255" value=""/>

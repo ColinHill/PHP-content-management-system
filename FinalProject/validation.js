@@ -61,6 +61,8 @@ function formValidate3(){
         alert("HTMLSnippet must be filled out");
         return false;
     }
+}
+function formValidate4(){
     var x = document.forms["updateArticle"]["Name"].value;
     if (x==null || x=="") {
         alert("Name must be filled out");
@@ -86,6 +88,8 @@ function formValidate3(){
         alert("HTMLSnippet must be filled out");
         return false;
     }
+}
+function formValidate5(){
     var x = document.forms["updateContent"]["Name"].value;
     if (x==null || x=="") {
         alert("Name must be filled out");
@@ -106,6 +110,8 @@ function formValidate3(){
         alert("Description must be filled out");
         return false;
     }
+}
+function validateForm6(){
     var x = document.forms["createContent"]["Name"].value;
     if (x==null || x=="") {
         alert("Name must be filled out");
@@ -126,6 +132,8 @@ function formValidate3(){
         alert("Description must be filled out");
         return false;
     }
+}
+function validateForm7(){
     var x = document.forms["updateTemplate"]["Name"].value;
     if (x==null || x=="") {
         alert("name must be filled out");
@@ -141,6 +149,8 @@ function formValidate3(){
         alert("CSS snippet must be filled out");
         return false;
     }
+}
+function validateForm8(){
     var x = document.forms["createTemplate"]["Name"].value;
     if (x==null || x=="") {
         alert("name must be filled out");
@@ -156,6 +166,8 @@ function formValidate3(){
         alert("CSS snippet must be filled out");
         return false;
     }
+}
+function validateForm9(){
     var x = document.forms["updateUser"]["first_name"].value;
     if (x==null || x=="") {
         alert("first name must be filled out");
@@ -181,6 +193,8 @@ function formValidate3(){
         alert("salt must be filled out");
         return false;
     }
+}
+function validateForm10(){
     var x = document.forms["createUser"]["first_name"].value;
     if (x==null || x=="") {
         alert("first name must be filled out");

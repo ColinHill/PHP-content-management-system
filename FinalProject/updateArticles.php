@@ -35,7 +35,7 @@ if ($allPages == 1)
     <input type="submit" value="Return To Manage Articles" />
 </form>
 
-<form id="updateArticle" method="post" onsubmit="return validateForm()" action="runUpdateArticles.php">
+<form id="updateArticle" method="post" onsubmit="return formValidate4()" action="runUpdateArticles.php">
 
     <p>Article ID:
         <input id="Articles_ID" name="Articles_ID" type="text" maxlength="255" value="<?php echo $Articles_ID; ?>" readonly="readonly" />

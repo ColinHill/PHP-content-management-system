@@ -15,7 +15,7 @@
     <input type="submit" value="Return To Manage Articles" />
 </form>
 
-<form id="createArticle" method="post" action="runCreateArticles.php" onsubmit="return validateForm()">
+<form id="createArticle" method="post" action="runCreateArticles.php" onsubmit="return validateForm3()">
 
     <p>Name:
         <input id="Name" name="Name" type="text" maxlength="255" value=""/>

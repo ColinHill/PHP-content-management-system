@@ -14,7 +14,7 @@
     <input type="submit" value="Return To Manage Content Areas" />
 </form>
 
-<form id="createContent" method="post" action="runCreateContent.php" onsubmit="return validateForm()">
+<form id="createContent" method="post" action="runCreateContent.php" onsubmit="return validateForm6()">
 
     <p>Name:
         <input id="Name" name="Name" type="text" maxlength="255" value=""/>

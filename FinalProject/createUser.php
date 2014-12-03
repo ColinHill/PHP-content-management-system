@@ -15,7 +15,7 @@
     <input type="submit" value="Return To Manage Users" />
 </form>
 
-    <form id="createUser" method="post" onsubmit="return validateForm()" action="runCreateUser.php">
+    <form id="createUser" method="post" onsubmit="return validateForm10()" action="runCreateUser.php">
 
        <p>User ID:
            <input id="User_ID" name="User_ID" type="text" maxlength="255" value="" readonly="readonly" />

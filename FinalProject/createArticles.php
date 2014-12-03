@@ -37,25 +37,25 @@
     $contentArea = 1;
 
     while ($row = mysqli_fetch_assoc($resultCA)):
-        $contentAreaValue = $row['Order'];
+        $contentAreaValue = $row['ContentAreas_ID'];
         $contentAreaName = $row['Name'];
         ?>
 
         <p>
-            <input type="radio" name="createArticle" value="<?php echo $contentAreaValue ?>"
+            <input type="radio" id="contentRadio" name="createArticle" value="<?php echo $contentAreaValue ?>"
                 <?php if ($contentArea == $contentAreaValue) {echo "checked";}?> /><?php echo $contentAreaName ?>
         </p>
 
     <?php endwhile; ?>
 
     <p>All Pages:
-        <input type="checkbox" name="allPages" />
+        <input type="checkbox" name="allPages" value="0"/>
 
     <p>HTML Snippet:<p>
-        <textarea form="updateArticle" name="HTMLSnippet" cols="100" rows="20" maxlength="10000" wrap="soft" value="">
+        <textarea name="HTMLSnippet" cols="100" rows="20" maxlength="10000" wrap="soft" value="">
         </textarea>
 
     <p><input id="submit" type="submit" name="submit" value="Create Article" />
-
+</form>
 </body>
 </html>

@@ -12,10 +12,13 @@ $name = $_POST['Name'];
 $title = $_POST['Title'];
 $description = $_POST['Description'];
 $page = $_POST['Page'];
-$contentArea = $_POST['contentAreaDropDown'];
+$contentArea = $_POST['createArticle'];
 $htmlSnippet = $_POST['HTMLSnippet'];
 $allPages = $_POST['allPages'];
-
+if(empty ($allPages))
+{
+    $allPages = 0;
+}
 
 $query = "INSERT INTO Articles (Name, Title, Description, HTMLSnippet, Page, AllPages, ContentArea, CreatedBy) ";
 $query .= "VALUES ('$name', '$title', '$description', '$htmlSnippet', '$page', '$allPages', '$contentArea', 1)";

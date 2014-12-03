@@ -13,7 +13,7 @@ $alias = $_POST['Alias'];
 $order = $_POST['Order'];
 $description = $_POST['Description'];
 
-$query = "INSERT INTO ContentAreas (Name, Alias, Order, Description, CreatedBy) ";
+$query = "INSERT INTO ContentAreas (Name, Alias, ContentAreas.Order, Description, CreatedBy) ";
 $query .= "VALUES ('$name', '$alias', '$order', '$description', 1)";
 
 $result = mysqli_query($db, $query);

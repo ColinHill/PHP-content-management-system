@@ -15,7 +15,7 @@ $order = $_POST['Order'];
 $description = $_POST['Description'];
 
 $query = "UPDATE ContentAreas SET Name = '$name', Description = '$description', ";
-$query .= "Alias = '$alias', Order = '$order' WHERE ContentAreas_ID = '$contentid'";
+$query .= "Alias = '$alias', ContentAreas.Order = '$order' WHERE ContentAreas_ID = '$contentid'";
 
 $result = mysqli_query($db, $query);
 

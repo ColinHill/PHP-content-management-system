@@ -4,7 +4,7 @@
 
 <html>
 <head>
-
+    <script src="validation.js"></script>
     <title>Create Template:</title>
 
 </head>

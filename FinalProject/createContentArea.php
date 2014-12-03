@@ -4,6 +4,7 @@
 
 <html>
 <head>
+    <script src="validation.js"></script>
     <title>Create Content Area:</title>
 </head>
 

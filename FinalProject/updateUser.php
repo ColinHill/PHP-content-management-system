@@ -24,7 +24,7 @@ endwhile;
 ?>
 <html>
 <head>
-
+    <script src="validation.js"></script>
     <title>Update User</title>
 
 </head>

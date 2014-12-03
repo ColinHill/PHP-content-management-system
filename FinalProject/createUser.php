@@ -6,7 +6,7 @@
 <head>
 
 <title>Create User</title>
-
+<script src="validation.js"></script>
 </head>
 
 <body>

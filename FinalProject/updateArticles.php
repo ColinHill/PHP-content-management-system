@@ -25,6 +25,7 @@ if ($allPages == 1)
 ?>
 <html>
 <head>
+    <script src="validation.js"></script>
     <title>Update Article:</title>
 </head>
 

@@ -13,6 +13,7 @@
 ?>
 <html>
 <head>
+    <script src="validation.js"></script>
     <title>Update Template:</title>
 </head>
 

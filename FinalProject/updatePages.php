@@ -15,6 +15,7 @@ endwhile;
 ?>
 <html>
 <head>
+    <script src="validation.js"></script>
     <title>Update Site Page:</title>
 </head>
 

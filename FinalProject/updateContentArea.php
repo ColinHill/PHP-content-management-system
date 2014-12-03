@@ -16,6 +16,7 @@ endwhile;
 ?>
 <html>
 <head>
+    <script src="validation.js"></script>
     <title>Update Content Area:</title>
 </head>
 

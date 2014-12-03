@@ -4,6 +4,7 @@
 
 <html>
 <head>
+    <script src="validation.js"></script>
     <title>Create Site Page:</title>
 </head>
 
@@ -13,7 +14,7 @@
     <input type="submit" value="Return To Manage Pages" />
 </form>
 
-<form id="createPage" method="post" action="runCreatePage.php">
+<form id="createPage" method="post" onsubmit="return validateForm()" action="runCreatePage.php">
 
     <p>Name:
         <input id="Name" name="Name" type="text" maxlength="255" value=""/>

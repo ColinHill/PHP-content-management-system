@@ -10,11 +10,6 @@ function validateForm() {
             alert("Alias must be filled out");
             return false;
     }
-    var x = document.forms["createPage"]["Description"].value;
-    if (x==null || x=="") {
-        alert("Description must be filled out");
-        return false;
-    }
 }
 function validateForm2()
 {
@@ -29,11 +24,6 @@ function validateForm2()
         alert("Alias must be filled out");
         return false;
     }
-    var x = document.forms["updatePage"]["Description"].value;
-    if (x==null || x=="") {
-        alert("Description must be filled out");
-        return false;
-    }
 }
 function formValidate3(){
     var x = document.forms["createArticle"]["Name"].value;
@@ -44,11 +34,6 @@ function formValidate3(){
     var x = document.forms["createArticle"]["Title"].value;
     if (x==null || x=="") {
         alert("Title must be filled out");
-        return false;
-    }
-    var x = document.forms["createArticle"]["Description"].value;
-    if (x==null || x=="") {
-        alert("Description must be filled out");
         return false;
     }
     var x = document.forms["createArticle"]["Page"].value;
@@ -71,11 +56,6 @@ function formValidate4(){
     var x = document.forms["updateArticle"]["Title"].value;
     if (x==null || x=="") {
         alert("Title must be filled out");
-        return false;
-    }
-    var x = document.forms["updateArticle"]["Description"].value;
-    if (x==null || x=="") {
-        alert("Description must be filled out");
         return false;
     }
     var x = document.forms["updateArticle"]["Page"].value;
@@ -105,11 +85,6 @@ function formValidate5(){
         alert("Order must be filled out");
         return false;
     }
-    var x = document.forms["updateContent"]["Description"].value;
-    if (x==null || x=="") {
-        alert("Description must be filled out");
-        return false;
-    }
 }
 function validateForm6(){
     var x = document.forms["createContent"]["Name"].value;
@@ -127,21 +102,11 @@ function validateForm6(){
         alert("Order must be filled out");
         return false;
     }
-    var x = document.forms["createContent"]["Description"].value;
-    if (x==null || x=="") {
-        alert("Description must be filled out");
-        return false;
-    }
 }
 function validateForm7(){
     var x = document.forms["updateTemplate"]["Name"].value;
     if (x==null || x=="") {
         alert("name must be filled out");
-        return false;
-    }
-    var x = document.forms["updateTemplate"]["Description"].value;
-    if (x==null || x=="") {
-        alert("Description must be filled out");
         return false;
     }
     var x = document.forms["updateTemplate"]["CSSSnippet"].value;
@@ -154,11 +119,6 @@ function validateForm8(){
     var x = document.forms["createTemplate"]["Name"].value;
     if (x==null || x=="") {
         alert("name must be filled out");
-        return false;
-    }
-    var x = document.forms["createTemplate"]["Description"].value;
-    if (x==null || x=="") {
-        alert("Description must be filled out");
         return false;
     }
     var x = document.forms["createTemplate"]["CSSSnippet"].value;
@@ -179,8 +139,8 @@ function validateForm9(){
         return false;
     }
     var x = document.forms["updateUser"]["user_name"].value;
-    if (x==null || x=="") {
-        alert("user name must be filled out");
+    if (x==null || x=="" || x.length < 8) {
+        alert("user name must be filled out with at least 8 characters");
         return false;
     }
     var x = document.forms["updateUser"]["password"].value;
@@ -206,8 +166,8 @@ function validateForm10(){
         return false;
     }
     var x = document.forms["createUser"]["user_name"].value;
-    if (x==null || x=="") {
-        alert("user name must be filled out");
+    if (x==null || x=="" || x.length < 8) {
+        alert("user name must be filled out and contain at least 8 characters");
         return false;
     }
     var x = document.forms["createUser"]["password"].value;

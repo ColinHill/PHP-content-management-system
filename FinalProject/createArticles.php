@@ -1,5 +1,6 @@
 <?php
-
+    include_once ("dbConnect.php");
+    $db = dbConnect::getConnection();
 ?>
 
 <html>
@@ -29,18 +30,29 @@
         <input id="Page" name="Page" type="text" value=""/>
 
     <p>Content Area:</p>
-    <p><select name="contentAreaDropDown" size="1" multiple="no">
-            <option value="1">Header</option>
-            <option value="2">Aside</option>
-            <option value="3">Body</option>
-            <option value="4">Footer</option>
-        </select>
+    <?php
+    $queryCA = "SELECT * FROM ContentAreas ORDER BY ContentAreas_ID ASC";
+    $resultCA = mysqli_query($db, $queryCA);
 
-    <p><input type="checkbox" name="allPages" />
+    $contentArea = 1;
 
-    <p>
-        <textarea form="createArticle" name="HTMLSnippet" cols="100" rows="20" maxlength="10000" wrap="soft" value="">
+    while ($row = mysqli_fetch_assoc($resultCA)):
+        $contentAreaValue = $row['Order'];
+        $contentAreaName = $row['Name'];
+        ?>
 
+        <p>
+            <input type="radio" name="createArticle" value="<?php echo $contentAreaValue ?>"
+                <?php if ($contentArea == $contentAreaValue) {echo "checked";}?> /><?php echo $contentAreaName ?>
+        </p>
+
+    <?php endwhile; ?>
+
+    <p>All Pages:
+        <input type="checkbox" name="allPages" />
+
+    <p>HTML Snippet:<p>
+        <textarea form="updateArticle" name="HTMLSnippet" cols="100" rows="20" maxlength="10000" wrap="soft" value="">
         </textarea>
 
     <p><input id="submit" type="submit" name="submit" value="Create Article" />

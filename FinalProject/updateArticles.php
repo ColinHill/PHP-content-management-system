@@ -80,7 +80,7 @@ if ($allPages == 1)
     ?>
 
     <p>
-        <textarea form="updateArticle" name="HTMLSnippet" cols="100" rows="20" maxlength="10000" wrap="soft" value=""><?php echo $htmlSnippet; ?>
+        <textarea form="updateArticle" name="HTMLSnippet" cols="100" rows="20" maxlength="10000" wrap="soft" value=""><?php echo $htmlSnippet;?>
         </textarea>
 
     <p><input id="submit" type="submit" name="submit" value="Update Article" />

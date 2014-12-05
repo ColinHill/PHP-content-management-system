@@ -57,13 +57,16 @@ endwhile;
 
     <p>Privileges:
 
-    <p>	<input id="Administrator" name="Administrator" class="element checkbox" type="checkbox" value="0" />
+    <p>	<input id="Administrator" name="Administrator" class="element checkbox" type="checkbox"
+                  value="" <?php if($administrator == 1){echo "checked";}?>/>
         Administrator
 
-    <p> <input id="Editor" name="Editor" class="element checkbox" type="checkbox" value="0" />
+    <p> <input id="Editor" name="Editor" class="element checkbox" type="checkbox"
+               value="" <?php if($editor == 1){echo "checked";}?>/>
         Editor
 
-    <p> <input id="Author" name="Author" class="element checkbox" type="checkbox" value="0" />
+    <p> <input id="Author" name="Author" class="element checkbox" type="checkbox"
+               value="" <?php if($author == 1){echo "checked";}?>/>
         Author
 
     <p><input id=" " type="submit" name="submit" value="Update User" />

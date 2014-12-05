@@ -17,6 +17,19 @@ $administrator = $_POST['Administrator'];
 $editor = $_POST['Editor'];
 $author = $_POST['Author'];
 
+if ($administrator == null)
+{
+    $administrator = 0;
+}
+if ($editor == null)
+{
+    $editor = 0;
+}
+if ($author == null)
+{
+    $author = 0;
+}
+
 $query = "INSERT INTO Users (first_name, last_name, user_name, password, salt, CreatedBy) ";
 $query .= "VALUES ('$first_name', '$last_name', '$user_name', '$password', '$salt', '1')";
 

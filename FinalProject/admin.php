@@ -79,7 +79,7 @@ if ($_SESSION['editor'] == 1){ ?>
         <input type="submit" value="Manage Articles" />
     </form>
     <form action="manageContentAreas.php">
-        <input type="submit" value="Manage Users" />
+        <input type="submit" value="Manage Content Areas" />
     </form>
     <form action="managePages.php">
         <input type="submit" value="Manage Pages" />

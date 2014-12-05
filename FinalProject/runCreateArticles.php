@@ -15,13 +15,29 @@ $page = $_POST['Page'];
 $contentArea = $_POST['createArticle'];
 $htmlSnippet = $_POST['HTMLSnippet'];
 $allPages = $_POST['allPages'];
+if (!ISSET ($page))
+{
+    $page = 50;
+}
 if(empty ($allPages))
 {
     $allPages = 0;
 }
+else
+{
+    $allPages = 1;
+}
 
+if ($page == 50)
+{
+    $query = "INSERT INTO Articles (Name, Title, Description, HTMLSnippet, Page, AllPages, ContentArea, CreatedBy) ";
+    $query .= "VALUES ('$name', '$title', '$description', '$htmlSnippet', NULL, '$allPages', '$contentArea', 1)";
+}
+else
+{
 $query = "INSERT INTO Articles (Name, Title, Description, HTMLSnippet, Page, AllPages, ContentArea, CreatedBy) ";
 $query .= "VALUES ('$name', '$title', '$description', '$htmlSnippet', '$page', '$allPages', '$contentArea', 1)";
+}
 
 $result = mysqli_query($db, $query);
 

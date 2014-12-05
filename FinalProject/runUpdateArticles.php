@@ -13,12 +13,32 @@ $name = $_POST['Name'];
 $title = $_POST ['Title'];
 $description = $_POST['Description'];
 $htmlSnippet = $_POST['HTMLSnippet'];
-$contentArea = $_POST['contentAreaDropDown'];
+$contentArea = $_POST['updateArticle'];
 $allPages = $_POST['allPages'];
 $page = $_POST['Page'];
+if ($page == "")
+{
+    $page = 50;
+}
+if(empty ($allPages))
+{
+    $allPages = 0;
+}
+else
+{
+    $allPages = 1;
+}
 
+if ($page == 50)
+{
+    $query = "UPDATE Articles SET Name = '$name', Description = '$description', Title = '$title', ContentArea = '$contentArea', ";
+    $query .= "AllPages = '$allPages', Page = NULL, HTMLSnippet = '$htmlSnippet' WHERE Articles_ID = '$Article_ID'";
+}
+else
+{
 $query = "UPDATE Articles SET Name = '$name', Description = '$description', Title = '$title', ContentArea = '$contentArea', ";
 $query .= "AllPages = '$allPages', Page = '$page', HTMLSnippet = '$htmlSnippet' WHERE Articles_ID = '$Article_ID'";
+}
 
 $result = mysqli_query($db, $query);
 

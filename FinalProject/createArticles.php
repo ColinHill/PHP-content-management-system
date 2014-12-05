@@ -49,7 +49,7 @@
     <?php endwhile; ?>
 
     <p>All Pages:
-        <input type="checkbox" name="allPages" value="0"/>
+        <input type="checkbox" name="allPages" value="A" />
 
     <p>HTML Snippet:<p>
         <textarea name="HTMLSnippet" cols="100" rows="20" maxlength="10000" wrap="soft" value="">

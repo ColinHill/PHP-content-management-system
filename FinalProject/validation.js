@@ -36,11 +36,6 @@ function formValidate3(){
         alert("Title must be filled out");
         return false;
     }
-    var x = document.forms["createArticle"]["Page"].value;
-    if (x==null || x=="") {
-        alert("Page must be filled out");
-        return false;
-    }
     var x = document.forms["createArticle"]["HTMLSnippet"].value;
     if (x==null || x=="") {
         alert("HTMLSnippet must be filled out");
@@ -56,11 +51,6 @@ function formValidate4(){
     var x = document.forms["updateArticle"]["Title"].value;
     if (x==null || x=="") {
         alert("Title must be filled out");
-        return false;
-    }
-    var x = document.forms["updateArticle"]["Page"].value;
-    if (x==null || x=="") {
-        alert("Page must be filled out");
         return false;
     }
     var x = document.forms["updateArticle"]["HTMLSnippet"].value;

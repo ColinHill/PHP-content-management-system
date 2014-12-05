@@ -59,7 +59,7 @@ if ($allPages == 1)
     $resultCA = mysqli_query($db, $queryCA);
 
     while ($row = mysqli_fetch_assoc($resultCA)):
-    $contentAreaValue = $row['Order'];
+    $contentAreaValue = $row['ContentAreas_ID'];
     $contentAreaName = $row['Name'];
     ?>
 

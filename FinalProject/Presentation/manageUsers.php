@@ -53,7 +53,7 @@ header("location:main_login.php");
     ?>
 </table>
 
-<form action="../BusinessScripts/deactivateUser.php"  method="post" name="deactivateUser">
+<form action="../DataAccess/deactivateUser.php"  method="post" name="deactivateUser">
     <p>ID to Deactivate:
         <input name="deactivate" type="text">
     </p>

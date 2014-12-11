@@ -21,7 +21,7 @@ if($_SESSION['editor'] == 0 && $_SESSION['author'] == 0 && $_SESSION['allaccess'
     <input type="submit" value="Return To Manage Pages" />
 </form>
 
-<form id="createPage" method="post" onsubmit="return validateForm()" action="../BusinessScripts/runCreatePage.php">
+<form id="createPage" method="post" onsubmit="return validateForm()" action="../DataAccess/runCreatePage.php">
 
     <p>Name:
         <input id="Name" name="Name" type="text" maxlength="255" value=""/>

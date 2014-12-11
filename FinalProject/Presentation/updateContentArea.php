@@ -36,7 +36,7 @@ endwhile;
     <input type="submit" value="Return To Manage Content Areas" />
 </form>
 
-<form id="updateContent" method="post" onsubmit="return formValidate5()" action="../BusinessScripts/runUpdateContent.php">
+<form id="updateContent" method="post" onsubmit="return formValidate5()" action="../DataAccess/runUpdateContent.php">
 
     <p>Template ID:
         <input id="ContentAreas_ID" name="ContentAreas_ID" type="text" maxlength="255" value="<?php echo strip_tags($contentid); ?>" readonly="readonly" />

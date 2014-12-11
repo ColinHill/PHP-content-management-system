@@ -22,7 +22,7 @@ if($_SESSION['admin'] == 0 && $_SESSION['allaccess'] == 0){
     <input type="submit" value="Return To Manage Users" />
 </form>
 
-    <form id="createUser" method="post" onsubmit="return validateForm10()" action="../BusinessScripts/runCreateUser.php">
+    <form id="createUser" method="post" onsubmit="return validateForm10()" action="../DataAccess/runCreateUser.php">
 
        <p>User ID:
            <input id="User_ID" name="User_ID" type="text" maxlength="255" value="" readonly="readonly" />

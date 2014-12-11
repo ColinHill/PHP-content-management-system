@@ -27,7 +27,7 @@ if($_SESSION['editor'] == 0 && $_SESSION['author'] == 0 && $_SESSION['allaccess'
     <input type="submit" value="Return To Manage Articles" />
 </form>
 
-<form id="createArticle" method="post" action="../BusinessScripts/runCreateArticles.php" onsubmit="return validateForm3()">
+<form id="createArticle" method="post" action="../DataAccess/runCreateArticles.php" onsubmit="return validateForm3()">
 
     <p>Name:
         <input id="Name" name="Name" type="text" maxlength="255" value=""/>

@@ -47,7 +47,7 @@ if ($allPages == 1)
     <input type="submit" value="Return To Manage Articles" />
 </form>
 
-<form id="updateArticle" method="post" onsubmit="return formValidate4()" action="../BusinessScripts/runUpdateArticles.php">
+<form id="updateArticle" method="post" onsubmit="return formValidate4()" action="../DataAccess/runUpdateArticles.php">
 
     <p>Article ID:
         <input id="Articles_ID" name="Articles_ID" type="text" maxlength="255" value="<?php echo strip_tags($Articles_ID); ?>" readonly="readonly" />

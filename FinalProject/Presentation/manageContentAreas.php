@@ -51,7 +51,7 @@ if($_SESSION['editor'] == 0 && $_SESSION['allaccess'] == 0){
 
 </table>
 
-<form action="../BusinessScripts/deleteContentArea.php"  method="post" name="deleteContentArea">
+<form action="../DataAccess/deleteContentArea.php"  method="post" name="deleteContentArea">
     <p>ID to Delete:
         <input name="delete" type="text">
     </p>

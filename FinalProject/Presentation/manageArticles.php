@@ -71,7 +71,7 @@ if($_SESSION['editor'] == 0 && $_SESSION['author'] == 0 && $_SESSION['allaccess'
     ?>
 </table>
 
-<form action="../BusinessScripts/deleteArticles.php"  method="post" name="deleteArticles">
+<form action="../DataAccess/deleteArticles.php"  method="post" name="deleteArticles">
     <p>ID to Delete:
         <input name="delete" type="text">
     </p>

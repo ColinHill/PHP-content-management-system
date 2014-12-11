@@ -24,7 +24,7 @@ if($_SESSION['editor'] == 0 && $_SESSION['allaccess'] == 0){
     <input type="submit" value="Return To Manage Templates" />
 </form>
 
-<form id="createTemplate" method="post" onsubmit="return validateForm8()" action="../BusinessScripts/runCreateTemplate.php">
+<form id="createTemplate" method="post" onsubmit="return validateForm8()" action="../DataAccess/runCreateTemplate.php">
 
     <p>Name:
         <input id="Name" name="Name" type="text" maxlength="255" value=""/>

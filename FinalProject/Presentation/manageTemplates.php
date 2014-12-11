@@ -56,7 +56,7 @@ if($_SESSION['editor'] == 0 && $_SESSION['allaccess'] == 0){
                 ?>
             </td>
             <td>
-                <form action="../BusinessScripts/makeTemplateActive.php"  method="post" name="makeTemplateActive">
+                <form action="../DataAccess/makeTemplateActive.php"  method="post" name="makeTemplateActive">
                         <input name="CSSID" type="hidden" value="<?php echo strip_tags($currentID);?>" />
                     <p>
                         <input name="submit" type="submit" value="Activate" />
@@ -78,7 +78,7 @@ if($_SESSION['editor'] == 0 && $_SESSION['allaccess'] == 0){
     ?>
 </table>
 
-<form action="../BusinessScripts/deleteTemplate.php"  method="post" name="deactivateUser">
+<form action="../DataAccess/deleteTemplate.php"  method="post" name="deactivateUser">
     <p>ID to Delete:
         <input name="delete" type="text">
     </p>

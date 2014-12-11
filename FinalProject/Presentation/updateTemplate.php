@@ -35,7 +35,7 @@ if($_SESSION['editor'] == 0 && $_SESSION['allaccess'] == 0){
     <input type="submit" value="Return To Manage Templates" />
 </form>
 
-<form id="updateTemplate" method="post" onsubmit="return validateForm7()" action="../BusinessScripts/runUpdateTemplate.php">
+<form id="updateTemplate" method="post" onsubmit="return validateForm7()" action="../DataAccess/runUpdateTemplate.php">
 
     <p>Template ID:
         <input id="CSSTemplates_ID" name="CSSTemplates_ID" type="text" maxlength="255" value="<?php echo strip_tags($CSSTemplates_ID);?>" readonly="readonly" />

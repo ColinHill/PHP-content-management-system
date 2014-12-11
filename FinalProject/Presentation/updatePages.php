@@ -35,7 +35,7 @@ endwhile;
     <input type="submit" value="Return To Manage Pages" />
 </form>
 
-<form id="updatePage" method="post" onsubmit="return validateForm2()" action="../BusinessScripts/runUpdatePage.php">
+<form id="updatePage" method="post" onsubmit="return validateForm2()" action="../DataAccess/runUpdatePage.php">
 
     <p>Site Page ID:
         <input id="SitePages_ID" name="SitePages_ID" type="text" maxlength="255" value="<?php echo strip_tags($siteid); ?>" readonly="readonly" />

@@ -23,7 +23,7 @@ if($_SESSION['editor'] == 0 && $_SESSION['allaccess'] == 0){
     <input type="submit" value="Return To Manage Content Areas" />
 </form>
 
-<form id="createContent" method="post" action="../BusinessScripts/runCreateContent.php" onsubmit="return validateForm6()">
+<form id="createContent" method="post" action="../DataAccess/runCreateContent.php" onsubmit="return validateForm6()">
 
     <p>Name:
         <input id="Name" name="Name" type="text" maxlength="255" value=""/>

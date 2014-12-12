@@ -13,7 +13,7 @@ if($_SESSION['editor'] == 0 && $_SESSION['author'] == 0 && $_SESSION['allaccess'
 
 $articleid = mysqli_real_escape_string($db, $_POST['delete']);
 
-$query = "DELETE FROM Articles WHERE Articles_ID = '$articleid'";
+$query = "UPDATE Articles SET Page = NULL, AllPages = 0 WHERE Articles_ID = '$articleid'";
 
 $result = mysqli_query($db, $query);
 
@@ -24,5 +24,5 @@ if(!$result)
 
 ?>
 
-<p>Successfully deleted <?php echo mysqli_affected_rows($db); ?> record.</p>
+<p>Successfully deactivated <?php echo mysqli_affected_rows($db); ?> record.</p>
 <a href="../Presentation/manageArticles.php">Back to Manage Articles page</a>

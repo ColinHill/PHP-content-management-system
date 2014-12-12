@@ -102,5 +102,9 @@ if ($_SESSION['editor'] == 1){ ?>
     <input type="submit" value="Log Out" />
 </form>
 
+<form action="highchart.php">
+    <input type="submit" value="Check out Articles chart!" />
+</form>
+
 </body>
 </html>

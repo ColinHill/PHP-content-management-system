@@ -60,6 +60,9 @@ if (!isset($_SESSION['author'])){ ?>
 </form>
 
 <?php } ?>
+<form action="highchart.php">
+    <input type="submit" value="Check out the Articles chart!" />
+</form>
 
 
 <header>

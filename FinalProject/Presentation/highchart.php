@@ -85,7 +85,7 @@ $deactive = $row['COUNT(Articles_ID)'];
                     name: 'All Pages',
                     data: [<?php echo $allpages ?>]
                 }, {
-                    name: 'Specific/Deactived',
+                    name: 'Specific',
                     data: [<?php echo $nopages ?>]
                 }, {
                     name: 'Deactive',

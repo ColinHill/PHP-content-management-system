@@ -29,7 +29,7 @@ $allpages = $row['COUNT(Articles_ID)'];
                     type: 'bar'
                 },
                 title: {
-                    text: 'Articles on all pages vs specific/deactivated page'
+                    text: 'Articles on all pages vs specific/deactivated pages'
                 },
                 subtitle: {
                     text: 'CMS'

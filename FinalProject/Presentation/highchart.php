@@ -10,6 +10,12 @@ $result = mysqli_query($db, $query);
 while ($row = mysqli_fetch_assoc($result)){
 $allpages = $row['COUNT(Articles_ID)'];
 }
+$query = "SELECT COUNT(Articles_ID) FROM Articles WHERE AllPages = 0 AND Page = NULL";
+$result = mysqli_query($db, $query);
+while ($row = mysqli_fetch_assoc($result)){
+$deactive = $row['COUNT(Articles_ID)'];
+}
+
 ?>
 
 <!DOCTYPE HTML>
@@ -29,19 +35,20 @@ $allpages = $row['COUNT(Articles_ID)'];
                     type: 'bar'
                 },
                 title: {
-                    text: 'Articles on all pages vs specific/deactivated pages'
+                    text: 'Articles used on all pages, no pages, or specific pages'
                 },
                 subtitle: {
                     text: 'CMS'
                 },
                 xAxis: {
-                    categories: ['Articles', 'Specific/Deactivated'],
+                    categories: ['Articles', 'Specific', 'Deactivated'],
                     title: {
                         text: null
                     }
                 },
                 yAxis: {
                     min: 0,
+                    allowDecimals: false,
                     title: {
                         text: 'Articles',
                         align: 'high'
@@ -80,6 +87,9 @@ $allpages = $row['COUNT(Articles_ID)'];
                 }, {
                     name: 'Specific/Deactived',
                     data: [<?php echo $nopages ?>]
+                }, {
+                    name: 'Deactive',
+                    data: [<?php echo $deactive ?>]
                 }
                 ]
             });

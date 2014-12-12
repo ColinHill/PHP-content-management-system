@@ -20,9 +20,11 @@ if($_SESSION['admin'] == 0 && $_SESSION['allaccess'] == 0){
 $first_name = mysqli_real_escape_string($db, $_POST['first_name']);
 $last_name = mysqli_real_escape_string($db, $_POST['last_name']);
 $user_name = mysqli_real_escape_string($db, $_POST['user_name']);
-$salt = mysqli_real_escape_string($db, $_POST['first_name']);
+
+//$Salt = mysqli_real_escape_string($db, $_POST['first_name']);
 $temp_password = mysqli_real_escape_string($db, $_POST['password']);
-$password = crypt($temp_password, $salt);
+$password = crypt($temp_password, '$5$rounds=5000$anexamplestringforsalt$');
+
 $administrator = mysqli_real_escape_string($db, $_POST['Administrator']);
 $editor = mysqli_real_escape_string($db, $_POST['Editor']);
 $author = mysqli_real_escape_string($db, $_POST['Author']);
@@ -40,8 +42,8 @@ if ($author == null)
     $author = 0;
 }
 
-$query = "INSERT INTO Users (first_name, last_name, user_name, password, salt, CreatedBy) ";
-$query .= "VALUES ('$first_name', '$last_name', '$user_name', '$password', '$salt', '1')";
+$query = "INSERT INTO Users (first_name, last_name, user_name, password, CreatedBy) ";
+$query .= "VALUES ('$first_name', '$last_name', '$user_name', '$password', '1')";
 
 $result = mysqli_query($db, $query);
 

@@ -31,8 +31,8 @@ $temp_password = mysql_real_escape_string($_POST['mypassword']);
 $sql="SELECT first_name FROM Users WHERE user_name='$myusername'";
 $result=mysql_query($sql);
 $row = mysql_fetch_assoc($result);
-$salt = $row['first_name'];
-$mypassword = crypt($temp_password, $salt);
+//$salt = $row['first_name'];
+$mypassword = crypt($temp_password, '$5$rounds=5000$anexamplestringforsalt$');
 
 $sql="SELECT * FROM Users WHERE user_name='$myusername' AND password='$mypassword'";
 $result=mysql_query($sql);

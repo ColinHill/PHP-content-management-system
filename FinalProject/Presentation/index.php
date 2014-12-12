@@ -42,10 +42,10 @@ if (isset($_SESSION['author'])){
                     You have author access.
                 </p>
             </h1>
-            <form action="manageArticles.php">
+            <form action="authorManageArticles.php">
                 <input type="submit" value="Manage Articles" />
             </form>
-            <form action="managePages.php">
+            <form action="authorManagePages.php">
                 <input type="submit" value="Manage Pages" />
             </form>
             <form action="logout.php">

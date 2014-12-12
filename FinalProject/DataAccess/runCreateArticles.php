@@ -65,6 +65,21 @@ dbConnect::closeConnection($db);
 ?>
 </tbody>
 </table>
+
+
+<?php
+if ($_SESSION['Author' == 1]){
+    ?>
+
+    <a href="../Presentation/authorManageArticles.php">Back to Manage Articles page</a>
+  <?php
+}
+else{
+?>
 <a href="../Presentation/manageArticles.php">Back to Manage Articles page</a>
+
+<?php
+}
+?>
 </body>
 </html>

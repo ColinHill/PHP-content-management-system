@@ -69,5 +69,20 @@ if(!$result)
 
 ?>
 
+
+<?php
+if ($_SESSION['Author' == 1]){
+    ?>
+
+    <a href="../Presentation/authorManageArticles.php">Back to Manage Articles page</a>
+<?php
+}
+else{
+    ?>
+    <a href="../Presentation/authorManageArticles.php">Back to Manage Articles page</a>
+<?php
+}
+?>
+
+
 <p>Successfully Updated <?php echo mysqli_affected_rows($db); ?> records.</p>
-<a href="../Presentation/manageArticles.php">Back to Manage Articles page</a>

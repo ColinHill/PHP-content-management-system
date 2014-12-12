@@ -39,6 +39,23 @@ if(!$result)
 dbConnect::closeConnection($db);
 ?>
 
-<a href="../Presentation/managePages.php">Back to Manage Site Pages page</a>
+
+
+<?php
+if ($_SESSION['Author' == 1]){
+    ?>
+
+    <a href="../Presentation/authorManagePages.php">Back to Manage Site Pages page</a>
+<?php
+}
+else{
+    ?>
+    <a href="../Presentation/authorManagePages.php">Back to Manage Site Pages page</a>
+
+<?php
+}
+?>
+
+
 </body>
 </html>

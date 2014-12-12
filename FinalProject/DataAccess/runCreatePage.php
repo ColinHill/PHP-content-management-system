@@ -42,7 +42,7 @@ dbConnect::closeConnection($db);
 
 
 <?php
-if ($_SESSION['Author' == 1]){
+if ($_SESSION['author' == 1]){
     ?>
 
     <a href="../Presentation/authorManagePages.php">Back to Manage Site Pages page</a>

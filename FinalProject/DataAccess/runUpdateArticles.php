@@ -71,7 +71,7 @@ if(!$result)
 
 
 <?php
-if ($_SESSION['Author' == 1]){
+if ($_SESSION['author' == 1]){
     ?>
 
     <a href="../Presentation/authorManageArticles.php">Back to Manage Articles page</a>

@@ -13,7 +13,7 @@ class dbConnect
 
     static public function getReadOnly()
     {
-        return mysqli_connect("localhost", "root", "inet2005", "CMSTestDB2");
+        return mysqli_connect("localhost", "select", "inet2005", "CMSTestDB2");
     }//end getReadOnly
 
     static public function getArticleConnection()
